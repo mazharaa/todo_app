@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:todo_app/core/common/color_const.dart';
 import 'package:todo_app/core/utils/ui_helper.dart';
 
@@ -35,36 +36,37 @@ class AppTheme {
   );
 
   static TextTheme textTheme = TextTheme(
-    displayLarge: TextStyle(
+    displayLarge: GoogleFonts.poppins(
       fontSize: 20.sp,
       fontWeight: FontWeight.bold,
     ),
-    displayMedium: TextStyle(
+    displayMedium: GoogleFonts.poppins(
       fontSize: 18.sp,
       fontWeight: FontWeight.bold,
     ),
-    displaySmall: TextStyle(
+    displaySmall: GoogleFonts.poppins(
       fontSize: 16.sp,
       fontWeight: FontWeight.bold,
     ),
-    headlineLarge: TextStyle(
+    headlineLarge: GoogleFonts.poppins(
       fontSize: 14.sp,
       fontWeight: FontWeight.bold,
     ),
-    headlineMedium: TextStyle(
+    headlineMedium: GoogleFonts.poppins(
       fontSize: 12.sp,
       fontWeight: FontWeight.bold,
     ),
-    headlineSmall: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold),
-    titleLarge: TextStyle(fontSize: 20.sp),
-    titleMedium: TextStyle(fontSize: 18.sp),
-    titleSmall: TextStyle(fontSize: 16.sp),
-    bodyLarge: TextStyle(fontSize: 14.sp),
-    bodyMedium: TextStyle(fontSize: 13.sp),
-    bodySmall: TextStyle(fontSize: 12.sp),
-    labelLarge: TextStyle(fontSize: 11.sp),
-    labelMedium: TextStyle(fontSize: 10.sp),
-    labelSmall: TextStyle(fontSize: 9.sp),
+    headlineSmall:
+        GoogleFonts.poppins(fontSize: 10.sp, fontWeight: FontWeight.bold),
+    titleLarge: GoogleFonts.poppins(fontSize: 20.sp),
+    titleMedium: GoogleFonts.poppins(fontSize: 18.sp),
+    titleSmall: GoogleFonts.poppins(fontSize: 16.sp),
+    bodyLarge: GoogleFonts.poppins(fontSize: 14.sp),
+    bodyMedium: GoogleFonts.poppins(fontSize: 13.sp),
+    bodySmall: GoogleFonts.poppins(fontSize: 12.sp),
+    labelLarge: GoogleFonts.poppins(fontSize: 11.sp),
+    labelMedium: GoogleFonts.poppins(fontSize: 10.sp),
+    labelSmall: GoogleFonts.poppins(fontSize: 9.sp),
   ).apply(
     bodyColor: Colors.black,
     displayColor: Colors.black,

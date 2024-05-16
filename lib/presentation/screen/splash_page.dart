@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/core/routes/app_router.dart';
 import 'package:todo_app/core/utils/text_theme_extension.dart';
 import 'package:todo_app/presentation/screen/widgets/welcome_background.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,6 +35,7 @@ class SplashPage extends StatelessWidget {
                   'Get things done with TODO',
                   style: context.textTheme.displayLarge?.copyWith(
                     fontSize: 22.sp,
+                    fontWeight: FontWeight.w700,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -41,7 +43,7 @@ class SplashPage extends StatelessWidget {
             )
           ],
         ),
-        buttonOnPressed: () {},
+        buttonOnPressed: () => context.router.push(const RegistrationRoute()),
       ),
     );
   }

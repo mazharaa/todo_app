@@ -4,15 +4,15 @@ import 'package:todo_app/core/common/color_const.dart';
 import 'package:todo_app/core/utils/text_theme_extension.dart';
 
 class WelcomeBackground extends StatelessWidget {
-  final Widget child;
   final String buttonTitle;
   final VoidCallback buttonOnPressed;
+  final Widget child;
 
   const WelcomeBackground({
     super.key,
-    required this.child,
     required this.buttonTitle,
     required this.buttonOnPressed,
+    required this.child,
   });
 
   @override
@@ -48,7 +48,7 @@ class WelcomeBackground extends StatelessWidget {
               ),
               child: Text(
                 buttonTitle,
-                style: context.textTheme.displayMedium,
+                style: context.textTheme.displayLarge,
               ),
             ),
           )

@@ -22,7 +22,7 @@ class SplashPage extends StatelessWidget {
               child: Image.asset(
                 height: 170.h,
                 width: 187.16.w,
-                'assets/imgs/undraw_mobile_ux_re_59hr 1undraw_mobile_ux_re_59hr 1.png',
+                'assets/imgs/undraw_mobile_ux_re_59hr.png',
               ),
             ),
             Positioned(

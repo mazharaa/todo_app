@@ -5,13 +5,19 @@ import 'package:todo_app/core/utils/text_theme_extension.dart';
 
 class WelcomeBackground extends StatelessWidget {
   final String buttonTitle;
+  final String? subtitle;
+  final String? subtitleLink;
   final VoidCallback buttonOnPressed;
+  final GestureTapCallback? subtitleLinkOnTap;
   final Widget child;
 
   const WelcomeBackground({
     super.key,
     required this.buttonTitle,
+    this.subtitle = '',
+    this.subtitleLink = '',
     required this.buttonOnPressed,
+    this.subtitleLinkOnTap,
     required this.child,
   });
 
@@ -51,7 +57,35 @@ class WelcomeBackground extends StatelessWidget {
                 style: context.textTheme.displayLarge,
               ),
             ),
-          )
+          ),
+          if (subtitle!.isNotEmpty && subtitleLink!.isNotEmpty)
+            Positioned(
+              top: 738.h,
+              left: 0,
+              right: 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '${subtitle!} ',
+                    style: context.textTheme.titleSmall?.copyWith(
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: subtitleLinkOnTap,
+                    child: Text(
+                      subtitleLink!,
+                      style: context.textTheme.displaySmall?.copyWith(
+                        fontSize: 15.sp,
+                        color: ColorConst.primary,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
         ],
       ),
     );

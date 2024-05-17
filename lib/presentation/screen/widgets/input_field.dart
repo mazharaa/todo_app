@@ -56,7 +56,7 @@ class InputField extends StatelessWidget {
             ),
           ),
         ),
-        UiHelper.verticalSpace(8.h)
+        if (separator) UiHelper.verticalSpace(8.h)
       ],
     );
   }

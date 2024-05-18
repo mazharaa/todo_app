@@ -7,20 +7,20 @@ import 'package:todo_app/core/utils/ui_helper.dart';
 
 @RoutePage()
 class DashboardPage extends StatelessWidget {
-  final todoList = [
-    'Learn programming by 12am',
-    'Learn how to cook by 1pm',
-    'Pick up the kids by 2pm',
-    'have lunch at 3pm',
-    'Go visit mum by 4pm',
-    'Going home by 5pm',
-    'Prepare for dinner by 6pm',
-    'Have dinner with family at 7pm',
-  ];
-  DashboardPage({super.key});
+  const DashboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final todoList = [
+      'Learn programming by 12am',
+      'Learn how to cook by 1pm',
+      'Pick up the kids by 2pm',
+      'have lunch at 3pm',
+      'Go visit mum by 4pm',
+      'Going home by 5pm',
+      'Prepare for dinner by 6pm',
+      'Have dinner with family at 7pm',
+    ];
     return Scaffold(
       body: Stack(
         children: [

@@ -19,14 +19,6 @@ mixin _$InputValidationState {
   InputValidationEntity get model => throw _privateConstructorUsedError;
   bool get showError => throw _privateConstructorUsedError;
   bool get changeState => throw _privateConstructorUsedError;
-  bool get nameFieldFocus => throw _privateConstructorUsedError;
-  bool get emailFieldFocus => throw _privateConstructorUsedError;
-  bool get pwdFieldFocus => throw _privateConstructorUsedError;
-  bool get rePwdFieldFocus => throw _privateConstructorUsedError;
-  bool get nameFieldFilled => throw _privateConstructorUsedError;
-  bool get emailFieldFilled => throw _privateConstructorUsedError;
-  bool get pwdFieldFilled => throw _privateConstructorUsedError;
-  bool get rePwdFieldFilled => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InputValidationStateCopyWith<InputValidationState> get copyWith =>
@@ -39,18 +31,7 @@ abstract class $InputValidationStateCopyWith<$Res> {
           $Res Function(InputValidationState) then) =
       _$InputValidationStateCopyWithImpl<$Res, InputValidationState>;
   @useResult
-  $Res call(
-      {InputValidationEntity model,
-      bool showError,
-      bool changeState,
-      bool nameFieldFocus,
-      bool emailFieldFocus,
-      bool pwdFieldFocus,
-      bool rePwdFieldFocus,
-      bool nameFieldFilled,
-      bool emailFieldFilled,
-      bool pwdFieldFilled,
-      bool rePwdFieldFilled});
+  $Res call({InputValidationEntity model, bool showError, bool changeState});
 
   $InputValidationEntityCopyWith<$Res> get model;
 }
@@ -72,14 +53,6 @@ class _$InputValidationStateCopyWithImpl<$Res,
     Object? model = null,
     Object? showError = null,
     Object? changeState = null,
-    Object? nameFieldFocus = null,
-    Object? emailFieldFocus = null,
-    Object? pwdFieldFocus = null,
-    Object? rePwdFieldFocus = null,
-    Object? nameFieldFilled = null,
-    Object? emailFieldFilled = null,
-    Object? pwdFieldFilled = null,
-    Object? rePwdFieldFilled = null,
   }) {
     return _then(_value.copyWith(
       model: null == model
@@ -93,38 +66,6 @@ class _$InputValidationStateCopyWithImpl<$Res,
       changeState: null == changeState
           ? _value.changeState
           : changeState // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nameFieldFocus: null == nameFieldFocus
-          ? _value.nameFieldFocus
-          : nameFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailFieldFocus: null == emailFieldFocus
-          ? _value.emailFieldFocus
-          : emailFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      pwdFieldFocus: null == pwdFieldFocus
-          ? _value.pwdFieldFocus
-          : pwdFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rePwdFieldFocus: null == rePwdFieldFocus
-          ? _value.rePwdFieldFocus
-          : rePwdFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nameFieldFilled: null == nameFieldFilled
-          ? _value.nameFieldFilled
-          : nameFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailFieldFilled: null == emailFieldFilled
-          ? _value.emailFieldFilled
-          : emailFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      pwdFieldFilled: null == pwdFieldFilled
-          ? _value.pwdFieldFilled
-          : pwdFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rePwdFieldFilled: null == rePwdFieldFilled
-          ? _value.rePwdFieldFilled
-          : rePwdFieldFilled // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -146,18 +87,7 @@ abstract class _$$InputValidationStateImplCopyWith<$Res>
       __$$InputValidationStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {InputValidationEntity model,
-      bool showError,
-      bool changeState,
-      bool nameFieldFocus,
-      bool emailFieldFocus,
-      bool pwdFieldFocus,
-      bool rePwdFieldFocus,
-      bool nameFieldFilled,
-      bool emailFieldFilled,
-      bool pwdFieldFilled,
-      bool rePwdFieldFilled});
+  $Res call({InputValidationEntity model, bool showError, bool changeState});
 
   @override
   $InputValidationEntityCopyWith<$Res> get model;
@@ -177,14 +107,6 @@ class __$$InputValidationStateImplCopyWithImpl<$Res>
     Object? model = null,
     Object? showError = null,
     Object? changeState = null,
-    Object? nameFieldFocus = null,
-    Object? emailFieldFocus = null,
-    Object? pwdFieldFocus = null,
-    Object? rePwdFieldFocus = null,
-    Object? nameFieldFilled = null,
-    Object? emailFieldFilled = null,
-    Object? pwdFieldFilled = null,
-    Object? rePwdFieldFilled = null,
   }) {
     return _then(_$InputValidationStateImpl(
       model: null == model
@@ -199,38 +121,6 @@ class __$$InputValidationStateImplCopyWithImpl<$Res>
           ? _value.changeState
           : changeState // ignore: cast_nullable_to_non_nullable
               as bool,
-      nameFieldFocus: null == nameFieldFocus
-          ? _value.nameFieldFocus
-          : nameFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailFieldFocus: null == emailFieldFocus
-          ? _value.emailFieldFocus
-          : emailFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      pwdFieldFocus: null == pwdFieldFocus
-          ? _value.pwdFieldFocus
-          : pwdFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rePwdFieldFocus: null == rePwdFieldFocus
-          ? _value.rePwdFieldFocus
-          : rePwdFieldFocus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nameFieldFilled: null == nameFieldFilled
-          ? _value.nameFieldFilled
-          : nameFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailFieldFilled: null == emailFieldFilled
-          ? _value.emailFieldFilled
-          : emailFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      pwdFieldFilled: null == pwdFieldFilled
-          ? _value.pwdFieldFilled
-          : pwdFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rePwdFieldFilled: null == rePwdFieldFilled
-          ? _value.rePwdFieldFilled
-          : rePwdFieldFilled // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -239,17 +129,7 @@ class __$$InputValidationStateImplCopyWithImpl<$Res>
 
 class _$InputValidationStateImpl extends _InputValidationState {
   const _$InputValidationStateImpl(
-      {required this.model,
-      required this.showError,
-      required this.changeState,
-      required this.nameFieldFocus,
-      required this.emailFieldFocus,
-      required this.pwdFieldFocus,
-      required this.rePwdFieldFocus,
-      required this.nameFieldFilled,
-      required this.emailFieldFilled,
-      required this.pwdFieldFilled,
-      required this.rePwdFieldFilled})
+      {required this.model, required this.showError, required this.changeState})
       : super._();
 
   @override
@@ -258,26 +138,10 @@ class _$InputValidationStateImpl extends _InputValidationState {
   final bool showError;
   @override
   final bool changeState;
-  @override
-  final bool nameFieldFocus;
-  @override
-  final bool emailFieldFocus;
-  @override
-  final bool pwdFieldFocus;
-  @override
-  final bool rePwdFieldFocus;
-  @override
-  final bool nameFieldFilled;
-  @override
-  final bool emailFieldFilled;
-  @override
-  final bool pwdFieldFilled;
-  @override
-  final bool rePwdFieldFilled;
 
   @override
   String toString() {
-    return 'InputValidationState(model: $model, showError: $showError, changeState: $changeState, nameFieldFocus: $nameFieldFocus, emailFieldFocus: $emailFieldFocus, pwdFieldFocus: $pwdFieldFocus, rePwdFieldFocus: $rePwdFieldFocus, nameFieldFilled: $nameFieldFilled, emailFieldFilled: $emailFieldFilled, pwdFieldFilled: $pwdFieldFilled, rePwdFieldFilled: $rePwdFieldFilled)';
+    return 'InputValidationState(model: $model, showError: $showError, changeState: $changeState)';
   }
 
   @override
@@ -289,39 +153,11 @@ class _$InputValidationStateImpl extends _InputValidationState {
             (identical(other.showError, showError) ||
                 other.showError == showError) &&
             (identical(other.changeState, changeState) ||
-                other.changeState == changeState) &&
-            (identical(other.nameFieldFocus, nameFieldFocus) ||
-                other.nameFieldFocus == nameFieldFocus) &&
-            (identical(other.emailFieldFocus, emailFieldFocus) ||
-                other.emailFieldFocus == emailFieldFocus) &&
-            (identical(other.pwdFieldFocus, pwdFieldFocus) ||
-                other.pwdFieldFocus == pwdFieldFocus) &&
-            (identical(other.rePwdFieldFocus, rePwdFieldFocus) ||
-                other.rePwdFieldFocus == rePwdFieldFocus) &&
-            (identical(other.nameFieldFilled, nameFieldFilled) ||
-                other.nameFieldFilled == nameFieldFilled) &&
-            (identical(other.emailFieldFilled, emailFieldFilled) ||
-                other.emailFieldFilled == emailFieldFilled) &&
-            (identical(other.pwdFieldFilled, pwdFieldFilled) ||
-                other.pwdFieldFilled == pwdFieldFilled) &&
-            (identical(other.rePwdFieldFilled, rePwdFieldFilled) ||
-                other.rePwdFieldFilled == rePwdFieldFilled));
+                other.changeState == changeState));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      model,
-      showError,
-      changeState,
-      nameFieldFocus,
-      emailFieldFocus,
-      pwdFieldFocus,
-      rePwdFieldFocus,
-      nameFieldFilled,
-      emailFieldFilled,
-      pwdFieldFilled,
-      rePwdFieldFilled);
+  int get hashCode => Object.hash(runtimeType, model, showError, changeState);
 
   @JsonKey(ignore: true)
   @override
@@ -336,15 +172,7 @@ abstract class _InputValidationState extends InputValidationState {
   const factory _InputValidationState(
       {required final InputValidationEntity model,
       required final bool showError,
-      required final bool changeState,
-      required final bool nameFieldFocus,
-      required final bool emailFieldFocus,
-      required final bool pwdFieldFocus,
-      required final bool rePwdFieldFocus,
-      required final bool nameFieldFilled,
-      required final bool emailFieldFilled,
-      required final bool pwdFieldFilled,
-      required final bool rePwdFieldFilled}) = _$InputValidationStateImpl;
+      required final bool changeState}) = _$InputValidationStateImpl;
   const _InputValidationState._() : super._();
 
   @override
@@ -353,22 +181,6 @@ abstract class _InputValidationState extends InputValidationState {
   bool get showError;
   @override
   bool get changeState;
-  @override
-  bool get nameFieldFocus;
-  @override
-  bool get emailFieldFocus;
-  @override
-  bool get pwdFieldFocus;
-  @override
-  bool get rePwdFieldFocus;
-  @override
-  bool get nameFieldFilled;
-  @override
-  bool get emailFieldFilled;
-  @override
-  bool get pwdFieldFilled;
-  @override
-  bool get rePwdFieldFilled;
   @override
   @JsonKey(ignore: true)
   _$$InputValidationStateImplCopyWith<_$InputValidationStateImpl>

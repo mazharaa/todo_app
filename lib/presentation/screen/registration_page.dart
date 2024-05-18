@@ -21,7 +21,6 @@ class RegistrationPage extends StatelessWidget {
           buttonTitle: 'Register',
           subtitle: 'Already have an account?',
           subtitleLink: 'Sign In',
-          subtitleLinkOnTap: () => context.router.push(const LoginRoute()),
           child: Padding(
             padding: UiHelper.padding(top: 183.h, horizontal: 20.w),
             child: BlocBuilder<InputValidationCubit, InputValidationState>(
@@ -89,6 +88,10 @@ class RegistrationPage extends StatelessWidget {
           ),
           buttonOnPressed: () {
             context.read<InputValidationCubit>().submit();
+          },
+          subtitleLinkOnTap: () {
+            context.read<InputValidationCubit>().reset();
+            context.router.push(const LoginRoute());
           },
         ),
       ),

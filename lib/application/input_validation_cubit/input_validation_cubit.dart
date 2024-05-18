@@ -60,71 +60,20 @@ class InputValidationCubit extends Cubit<InputValidationState> {
     }
   }
 
-  void isFieldFocus(FocusNode focusNode, FieldType fieldType) {
-    fieldType.when(
-      none: () {},
-      name: () {
-        if (focusNode.hasFocus) {
-          emit(state.unmodified.copyWith(nameFieldFocus: true));
-        } else {
-          emit(state.unmodified.copyWith(nameFieldFocus: false));
-        }
-      },
-      email: () {
-        if (focusNode.hasFocus) {
-          emit(state.unmodified.copyWith(emailFieldFocus: true));
-        } else {
-          emit(state.unmodified.copyWith(emailFieldFocus: false));
-        }
-      },
-      pwd: () {
-        if (focusNode.hasFocus) {
-          emit(state.unmodified.copyWith(pwdFieldFocus: true));
-        } else {
-          emit(state.unmodified.copyWith(pwdFieldFocus: false));
-        }
-      },
-      rePwd: () {
-        if (focusNode.hasFocus) {
-          emit(state.unmodified.copyWith(rePwdFieldFocus: true));
-        } else {
-          emit(state.unmodified.copyWith(rePwdFieldFocus: false));
-        }
-      },
-    );
+  void reset() {
+    nameController.clear();
+    emailController.clear();
+    pwdController.clear();
+    rePwdController.clear();
+    emit(state.unmodified.copyWith(showError: false));
   }
 
-  void isFieldFilled(String val, FieldType fieldType) {
-    fieldType.when(
-      none: () {},
-      name: () {
-        if (val.isNotEmpty) {
-          emit(state.unmodified.copyWith(nameFieldFilled: true));
-        } else {
-          emit(state.unmodified.copyWith(nameFieldFilled: false));
-        }
-      },
-      email: () {
-        if (val.isNotEmpty) {
-          emit(state.unmodified.copyWith(emailFieldFilled: true));
-        } else {
-          emit(state.unmodified.copyWith(emailFieldFilled: false));
-        }
-      },
-      pwd: () {
-        if (val.isNotEmpty) {
-          emit(state.unmodified.copyWith(pwdFieldFilled: true));
-        } else {
-          emit(state.unmodified.copyWith(pwdFieldFilled: false));
-        }
-      },
-      rePwd: () {
-        if (val.isNotEmpty) {
-          emit(state.unmodified.copyWith(rePwdFieldFilled: true));
-        } else {
-          emit(state.unmodified.copyWith(rePwdFieldFilled: false));
-        }
-      },
-    );
-  }
+  // @override
+  // Future<void> close() {
+  //   nameController.dispose();
+  //   emailController.dispose();
+  //   pwdController.dispose();
+  //   rePwdController.dispose();
+  //   return super.close();
+  // }
 }

@@ -67,13 +67,4 @@ class InputValidationCubit extends Cubit<InputValidationState> {
     rePwdController.clear();
     emit(state.unmodified.copyWith(showError: false));
   }
-
-  // @override
-  // Future<void> close() {
-  //   nameController.dispose();
-  //   emailController.dispose();
-  //   pwdController.dispose();
-  //   rePwdController.dispose();
-  //   return super.close();
-  // }
 }

@@ -3,31 +3,30 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:todo_app/domain/user/user.dart';
 
-@LazySingleton()
+@LazySingleton() // Register as singleton with injectable
 class DatabaseHelper {
-  static final DatabaseHelper instance = DatabaseHelper._init();
-  static Database? _database;
+  Database? _database;
 
-  DatabaseHelper._init();
-
-  Future<Database> get database async {
-    if (_database != null) return _database!;
-    _database = await _initDB('app_database.db');
-    if (_database == null) {
-      throw Exception("Failed to initialize database");
-    }
-    return _database!;
+  static Future<DatabaseHelper> create() async {
+    final helper = DatabaseHelper();
+    await helper._initDB('app_database.db');
+    return helper;
   }
 
-  Future<Database> _initDB(String filePath) async {
+  Future<void> _initDB(String filePath) async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, filePath);
 
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _createDB,
-    );
+    try {
+      _database = await openDatabase(
+        path,
+        version: 1,
+        onCreate: _createDB,
+      );
+    } catch (e) {
+      // Handle database opening error (e.g., print error message)
+      throw Exception('Failed to initialize database: $e');
+    }
   }
 
   Future _createDB(Database db, int version) async {
@@ -39,22 +38,20 @@ class DatabaseHelper {
         password TEXT NOT NULL
       )
     ''';
-
     await db.execute(userTable);
   }
 
   Future<int> insertUser(String name, String email, String password) async {
-    final db = await instance.database;
+    final db = await _database!; // Access database after initialization
     final id = await db.insert(
       'users',
       {'name': name, 'email': email, 'password': password},
     );
-
     return id;
   }
 
   Future<User?> querryUser(String email) async {
-    final db = await instance.database;
+    final db = await _database!; // Access database after initialization
     final maps = await db.query(
       'users',
       where: 'email = ?',

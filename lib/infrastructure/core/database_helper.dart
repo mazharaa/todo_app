@@ -42,7 +42,7 @@ class DatabaseHelper {
   }
 
   Future<int> insertUser(String name, String email, String password) async {
-    final db = await _database!; // Access database after initialization
+    final db = _database!;
     final id = await db.insert(
       'users',
       {'name': name, 'email': email, 'password': password},
@@ -51,7 +51,7 @@ class DatabaseHelper {
   }
 
   Future<User?> querryUser(String email) async {
-    final db = await _database!; // Access database after initialization
+    final db = _database!;
     final maps = await db.query(
       'users',
       where: 'email = ?',

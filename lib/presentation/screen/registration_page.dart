@@ -35,11 +35,6 @@ class RegistrationPage extends StatelessWidget {
               padding: UiHelper.padding(top: 183.h, horizontal: 20.w),
               child: Stack(
                 children: [
-                  authState.isLoading
-                      ? const Center(
-                          child: CircularProgressIndicator(),
-                        )
-                      : const SizedBox.shrink(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -97,6 +92,11 @@ class RegistrationPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  authState.isLoading
+                      ? const Center(
+                          child: CircularProgressIndicator(),
+                        )
+                      : const SizedBox.shrink(),
                 ],
               ),
             ),

@@ -42,7 +42,7 @@ class AuthReopsitory implements IAuthRepository {
   @override
   Future<Either<AuthFailure, User>> getUser({required String email}) async {
     try {
-      final response = await _databaseHelper.querryUser(email);
+      final response = await _databaseHelper.queryUser(email);
 
       if (response != null) {
         return right(response);

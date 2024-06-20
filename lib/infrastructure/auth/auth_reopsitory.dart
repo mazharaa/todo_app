@@ -53,4 +53,24 @@ class AuthReopsitory implements IAuthRepository {
       return left(const AuthFailure.serverError());
     }
   }
+
+  @override
+  Future<Either<AuthFailure, User>> login({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final response = await _databaseHelper.queryUserWithEmailAndPassword(
+        email,
+        password,
+      );
+
+      return response.fold(
+        (l) => left(const AuthFailure.emailAndPasswordNotMatch()),
+        (r) => right(r),
+      );
+    } catch (e) {
+      return left(const AuthFailure.serverError());
+    }
+  }
 }

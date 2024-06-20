@@ -21,6 +21,7 @@ mixin _$AuthFailure {
     required TResult Function() serverError,
     required TResult Function() userAlreadyExist,
     required TResult Function() userNotFound,
+    required TResult Function() emailAndPasswordNotMatch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AuthFailure {
     TResult? Function()? serverError,
     TResult? Function()? userAlreadyExist,
     TResult? Function()? userNotFound,
+    TResult? Function()? emailAndPasswordNotMatch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AuthFailure {
     TResult Function()? serverError,
     TResult Function()? userAlreadyExist,
     TResult Function()? userNotFound,
+    TResult Function()? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,8 @@ mixin _$AuthFailure {
     required TResult Function(_ServerError value) serverError,
     required TResult Function(_UserAlreadyExist value) userAlreadyExist,
     required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_EmailAndPasswordNotMatch value)
+        emailAndPasswordNotMatch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +55,8 @@ mixin _$AuthFailure {
     TResult? Function(_ServerError value)? serverError,
     TResult? Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult? Function(_UserNotFound value)? userNotFound,
+    TResult? Function(_EmailAndPasswordNotMatch value)?
+        emailAndPasswordNotMatch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +64,7 @@ mixin _$AuthFailure {
     TResult Function(_ServerError value)? serverError,
     TResult Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_EmailAndPasswordNotMatch value)? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +129,7 @@ class _$ServerErrorImpl implements _ServerError {
     required TResult Function() serverError,
     required TResult Function() userAlreadyExist,
     required TResult Function() userNotFound,
+    required TResult Function() emailAndPasswordNotMatch,
   }) {
     return serverError();
   }
@@ -131,6 +140,7 @@ class _$ServerErrorImpl implements _ServerError {
     TResult? Function()? serverError,
     TResult? Function()? userAlreadyExist,
     TResult? Function()? userNotFound,
+    TResult? Function()? emailAndPasswordNotMatch,
   }) {
     return serverError?.call();
   }
@@ -141,6 +151,7 @@ class _$ServerErrorImpl implements _ServerError {
     TResult Function()? serverError,
     TResult Function()? userAlreadyExist,
     TResult Function()? userNotFound,
+    TResult Function()? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -155,6 +166,8 @@ class _$ServerErrorImpl implements _ServerError {
     required TResult Function(_ServerError value) serverError,
     required TResult Function(_UserAlreadyExist value) userAlreadyExist,
     required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_EmailAndPasswordNotMatch value)
+        emailAndPasswordNotMatch,
   }) {
     return serverError(this);
   }
@@ -165,6 +178,8 @@ class _$ServerErrorImpl implements _ServerError {
     TResult? Function(_ServerError value)? serverError,
     TResult? Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult? Function(_UserNotFound value)? userNotFound,
+    TResult? Function(_EmailAndPasswordNotMatch value)?
+        emailAndPasswordNotMatch,
   }) {
     return serverError?.call(this);
   }
@@ -175,6 +190,7 @@ class _$ServerErrorImpl implements _ServerError {
     TResult Function(_ServerError value)? serverError,
     TResult Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_EmailAndPasswordNotMatch value)? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -229,6 +245,7 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     required TResult Function() serverError,
     required TResult Function() userAlreadyExist,
     required TResult Function() userNotFound,
+    required TResult Function() emailAndPasswordNotMatch,
   }) {
     return userAlreadyExist();
   }
@@ -239,6 +256,7 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     TResult? Function()? serverError,
     TResult? Function()? userAlreadyExist,
     TResult? Function()? userNotFound,
+    TResult? Function()? emailAndPasswordNotMatch,
   }) {
     return userAlreadyExist?.call();
   }
@@ -249,6 +267,7 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     TResult Function()? serverError,
     TResult Function()? userAlreadyExist,
     TResult Function()? userNotFound,
+    TResult Function()? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (userAlreadyExist != null) {
@@ -263,6 +282,8 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     required TResult Function(_ServerError value) serverError,
     required TResult Function(_UserAlreadyExist value) userAlreadyExist,
     required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_EmailAndPasswordNotMatch value)
+        emailAndPasswordNotMatch,
   }) {
     return userAlreadyExist(this);
   }
@@ -273,6 +294,8 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     TResult? Function(_ServerError value)? serverError,
     TResult? Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult? Function(_UserNotFound value)? userNotFound,
+    TResult? Function(_EmailAndPasswordNotMatch value)?
+        emailAndPasswordNotMatch,
   }) {
     return userAlreadyExist?.call(this);
   }
@@ -283,6 +306,7 @@ class _$UserAlreadyExistImpl implements _UserAlreadyExist {
     TResult Function(_ServerError value)? serverError,
     TResult Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_EmailAndPasswordNotMatch value)? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (userAlreadyExist != null) {
@@ -337,6 +361,7 @@ class _$UserNotFoundImpl implements _UserNotFound {
     required TResult Function() serverError,
     required TResult Function() userAlreadyExist,
     required TResult Function() userNotFound,
+    required TResult Function() emailAndPasswordNotMatch,
   }) {
     return userNotFound();
   }
@@ -347,6 +372,7 @@ class _$UserNotFoundImpl implements _UserNotFound {
     TResult? Function()? serverError,
     TResult? Function()? userAlreadyExist,
     TResult? Function()? userNotFound,
+    TResult? Function()? emailAndPasswordNotMatch,
   }) {
     return userNotFound?.call();
   }
@@ -357,6 +383,7 @@ class _$UserNotFoundImpl implements _UserNotFound {
     TResult Function()? serverError,
     TResult Function()? userAlreadyExist,
     TResult Function()? userNotFound,
+    TResult Function()? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -371,6 +398,8 @@ class _$UserNotFoundImpl implements _UserNotFound {
     required TResult Function(_ServerError value) serverError,
     required TResult Function(_UserAlreadyExist value) userAlreadyExist,
     required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_EmailAndPasswordNotMatch value)
+        emailAndPasswordNotMatch,
   }) {
     return userNotFound(this);
   }
@@ -381,6 +410,8 @@ class _$UserNotFoundImpl implements _UserNotFound {
     TResult? Function(_ServerError value)? serverError,
     TResult? Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult? Function(_UserNotFound value)? userNotFound,
+    TResult? Function(_EmailAndPasswordNotMatch value)?
+        emailAndPasswordNotMatch,
   }) {
     return userNotFound?.call(this);
   }
@@ -391,6 +422,7 @@ class _$UserNotFoundImpl implements _UserNotFound {
     TResult Function(_ServerError value)? serverError,
     TResult Function(_UserAlreadyExist value)? userAlreadyExist,
     TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_EmailAndPasswordNotMatch value)? emailAndPasswordNotMatch,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -402,4 +434,123 @@ class _$UserNotFoundImpl implements _UserNotFound {
 
 abstract class _UserNotFound implements AuthFailure {
   const factory _UserNotFound() = _$UserNotFoundImpl;
+}
+
+/// @nodoc
+abstract class _$$EmailAndPasswordNotMatchImplCopyWith<$Res> {
+  factory _$$EmailAndPasswordNotMatchImplCopyWith(
+          _$EmailAndPasswordNotMatchImpl value,
+          $Res Function(_$EmailAndPasswordNotMatchImpl) then) =
+      __$$EmailAndPasswordNotMatchImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EmailAndPasswordNotMatchImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$EmailAndPasswordNotMatchImpl>
+    implements _$$EmailAndPasswordNotMatchImplCopyWith<$Res> {
+  __$$EmailAndPasswordNotMatchImplCopyWithImpl(
+      _$EmailAndPasswordNotMatchImpl _value,
+      $Res Function(_$EmailAndPasswordNotMatchImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EmailAndPasswordNotMatchImpl implements _EmailAndPasswordNotMatch {
+  const _$EmailAndPasswordNotMatchImpl();
+
+  @override
+  String toString() {
+    return 'AuthFailure.emailAndPasswordNotMatch()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EmailAndPasswordNotMatchImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() serverError,
+    required TResult Function() userAlreadyExist,
+    required TResult Function() userNotFound,
+    required TResult Function() emailAndPasswordNotMatch,
+  }) {
+    return emailAndPasswordNotMatch();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? serverError,
+    TResult? Function()? userAlreadyExist,
+    TResult? Function()? userNotFound,
+    TResult? Function()? emailAndPasswordNotMatch,
+  }) {
+    return emailAndPasswordNotMatch?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? serverError,
+    TResult Function()? userAlreadyExist,
+    TResult Function()? userNotFound,
+    TResult Function()? emailAndPasswordNotMatch,
+    required TResult orElse(),
+  }) {
+    if (emailAndPasswordNotMatch != null) {
+      return emailAndPasswordNotMatch();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ServerError value) serverError,
+    required TResult Function(_UserAlreadyExist value) userAlreadyExist,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_EmailAndPasswordNotMatch value)
+        emailAndPasswordNotMatch,
+  }) {
+    return emailAndPasswordNotMatch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ServerError value)? serverError,
+    TResult? Function(_UserAlreadyExist value)? userAlreadyExist,
+    TResult? Function(_UserNotFound value)? userNotFound,
+    TResult? Function(_EmailAndPasswordNotMatch value)?
+        emailAndPasswordNotMatch,
+  }) {
+    return emailAndPasswordNotMatch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_UserAlreadyExist value)? userAlreadyExist,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_EmailAndPasswordNotMatch value)? emailAndPasswordNotMatch,
+    required TResult orElse(),
+  }) {
+    if (emailAndPasswordNotMatch != null) {
+      return emailAndPasswordNotMatch(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EmailAndPasswordNotMatch implements AuthFailure {
+  const factory _EmailAndPasswordNotMatch() = _$EmailAndPasswordNotMatchImpl;
 }

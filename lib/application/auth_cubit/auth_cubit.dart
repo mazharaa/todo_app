@@ -26,4 +26,15 @@ class AuthCubit extends Cubit<AuthState> {
 
     emit(state.copyWith(failureOrSucced: optionOf(response), isLoading: false));
   }
+
+  Future<void> loginUser(String email, String password) async {
+    emit(state.copyWith(failureOrSucced: none(), isLoading: true));
+
+    final response = await _iAuthRepository.login(
+      email: email,
+      password: password,
+    );
+
+    emit(state.copyWith(failureOrSucced: optionOf(response), isLoading: false));
+  }
 }

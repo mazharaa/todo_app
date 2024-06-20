@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:todo_app/domain/core/app_failure.dart';
 import 'package:todo_app/domain/user/user.dart';
 
-@LazySingleton() // Register as singleton with injectable
+@LazySingleton()
 class DatabaseHelper {
   Database? _database;
   Completer<void>? _databaseOpenCompleter;
@@ -36,7 +38,6 @@ class DatabaseHelper {
     } catch (e) {
       _databaseOpenCompleter!
           .completeError('Failed to initialize database: $e');
-      // Handle database opening error (e.g., print error message)
       throw Exception('Failed to initialize database: $e');
     }
   }
@@ -81,6 +82,24 @@ class DatabaseHelper {
       return User.fromJson(maps.first);
     } else {
       return null;
+    }
+  }
+
+  Future<Either<AppFailure, User>> queryUserWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
+    final db = await database;
+    final maps = await db.query(
+      'users',
+      where: 'email = ? AND password = ?',
+      whereArgs: [email, password],
+    );
+
+    if (maps.isNotEmpty) {
+      return right(User.fromJson(maps.first));
+    } else {
+      return left(const AppFailure.fromServerSide('User not found'));
     }
   }
 }

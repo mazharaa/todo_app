@@ -12,4 +12,9 @@ abstract class IAuthRepository {
   Future<Either<AuthFailure, User>> getUser({
     required String email,
   });
+
+  Future<Either<AuthFailure, User>> login({
+    required String email,
+    required String password,
+  });
 }

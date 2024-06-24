@@ -100,7 +100,7 @@ class LoginPage extends StatelessWidget {
               buttonOnPressed: () async {
                 context.read<InputValidationCubit>().submit();
 
-                if (validationState.model.failureOption is None) {
+                if (validationState.model.loginFailureOption is None) {
                   await context.read<AuthCubit>().loginUser(
                         emailController.text,
                         pwdController.text,

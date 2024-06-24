@@ -23,14 +23,21 @@ class InputValidationEntity with _$InputValidationEntity {
         rePwd: '',
       );
 
-  Option<FormFailure> get failureOption {
+  Option<FormFailure> get signUpFailureOption {
     return FormValidator.emptyValidator(name)
         .andThen(() => FormValidator.emailValidator(email))
         .andThen(() => FormValidator.pwdValidator(pwd))
+        .andThen(() => FormValidator.rePwdValidator(rePwd, pwd))
         .fold(
           (failure) => some(failure),
           (_) => none(),
         );
+  }
+
+  Option<FormFailure> get loginFailureOption {
+    return FormValidator.emptyValidator(email)
+        .andThen(() => FormValidator.emptyValidator(pwd))
+        .fold((failure) => some(failure), (_) => none());
   }
 
   String? get nameErrorMsg {

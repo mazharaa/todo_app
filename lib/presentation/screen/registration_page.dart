@@ -102,7 +102,7 @@ class RegistrationPage extends StatelessWidget {
             ),
             buttonOnPressed: () async {
               context.read<InputValidationCubit>().submit();
-              if (validationState.model.failureOption is None) {
+              if (validationState.model.signUpFailureOption is None) {
                 await context.read<AuthCubit>().registerUser(
                       nameController.text,
                       emailController.text,
